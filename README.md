@@ -7,6 +7,10 @@ clinic's own public listings; see [`docs/clinic-research.md`](docs/clinic-resear
 Next.js 16 (App Router, fully static) · Tailwind CSS v4 · TypeScript. No database, no backend:
 bookings go to the clinic's WhatsApp.
 
+- **Live:** https://dental-suite-and-co.vercel.app
+- **Repo:** https://github.com/MuhammadHamad/dental-suite-and-co (Vercel project `dental-suite-and-co`;
+  every push to `main` deploys to production)
+
 ## Run it
 
 ```bash
@@ -18,10 +22,12 @@ npm run start
 
 ## Deploy (Vercel)
 
-1. Push the repo to GitHub and import it in Vercel (framework preset: Next.js).
-2. Set **`NEXT_PUBLIC_SITE_URL`** to the final domain, e.g. `https://thedentalsuiteandco.com`.
-   It drives canonical URLs, the sitemap, robots.txt, Open Graph and structured data. Without it the
-   site falls back to the Vercel production URL.
+Already connected: pushing to `main` builds and deploys production automatically.
+
+Canonical URLs, the sitemap, robots.txt, Open Graph and structured data use Vercel's production
+domain (`VERCEL_PROJECT_PRODUCTION_URL`). When the clinic gets its own domain, add it to the Vercel
+project and redeploy — or set **`NEXT_PUBLIC_SITE_URL`** (e.g. `https://thedentalsuiteandco.com`)
+to pin it explicitly.
 
 ## Where to edit things
 
